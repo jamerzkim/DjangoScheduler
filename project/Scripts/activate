@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\james\OneDrive\Documents\GitHub\DjangoScheduler\project"
+VIRTUAL_ENV="C:\Users\james\Documents\GitHub\DjangoScheduler\project"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
