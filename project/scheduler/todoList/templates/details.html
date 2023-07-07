@@ -1,18 +1,19 @@
 {% extends "master.html" %}
 
-{% block title %} Document {%endblock %} 
+{% block title %} Document {% endblock %}
 
 {% block content %}
 <ul>
     {% for x in mymembers %}
-    <li>
-      Title: {{ x.title }} <br />
-      Description: {{ x.description }} <br />
-      Completed: {{ x.completed }}
+    <li { % if x.title == mymembers.title % } style="background-color: lightblue;" { % endif % }>
+        <h1>Title: {{ x.title }}</h1>
     </li>
+    <li>Description: {{ x.description }} <br />
+        Completed: {{ x.completed }}</li>
+    {% empty %}
+    <li>Nothing to do!</li>
     {% endfor %}
-  </ul>
+</ul>
 
-  <p>Back to <a href="/">Home</a></p>
+<p>Back to <a href="/">Home</a></p>
 {% endblock %}
-

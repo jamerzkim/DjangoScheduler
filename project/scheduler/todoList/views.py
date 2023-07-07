@@ -22,3 +22,15 @@ def details(request):
         'mymembers': mydata,
     }
     return HttpResponse(template.render(context, request))
+
+def main(request):
+  template = loader.get_template('main.html')
+  return HttpResponse(template.render())
+
+def template(request):
+    mydata = Todo.objects.all()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
