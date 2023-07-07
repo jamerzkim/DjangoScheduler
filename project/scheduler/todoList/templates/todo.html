@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %} Document {%endblock %} 
+
+{% block content %} 
+<ul>
+  {% for x in mymembers %}
+  <li>{{ x.id }}: {{ x }}</li>
+  {% endfor %}
+</ul>
+
+Click the button below to go to more details.
+<a href="details/"><button class="button">Go to Other Page</button></a> 
+{% endblock %}
+
+

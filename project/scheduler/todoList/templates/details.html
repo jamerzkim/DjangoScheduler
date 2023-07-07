@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %} Document {%endblock %} 
+
+{% block content %}
+<ul>
+    {% for x in mymembers %}
+    <li>
+      Title: {{ x.title }} <br />
+      Description: {{ x.description }} <br />
+      Completed: {{ x.completed }}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p>Back to <a href="/">Home</a></p>
+{% endblock %}
+

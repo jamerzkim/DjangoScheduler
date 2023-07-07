@@ -1,15 +1,6 @@
-{% load static %}
+{% extends "master.html" %} 
+{% block title %} Document l;uilykugchjgxhjc{%endblock %} 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <h1>Chinese people suck dick</h1>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{% static  'index.css'%}" />
-  </head>
-  <body>
-    I LOVE BARBIE SHE IS SO HOT
-  </body>
-</html>
+{% block content %} 
+Click the button below to add a new to-do to your list. <a href="check/"><button class="button">Go to Other Page</button></a> 
+{% endblock %}
