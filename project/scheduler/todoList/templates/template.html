@@ -1,8 +1,8 @@
 {% extends "master.html" %}
 
-{ % block title % } Document { % endblock % }
+{% block title %} Document {% endblock %}
 
-{ % block content % }
+{% block content %}
 <table border='1'>
     <tr>
       <th>ID</th>
@@ -17,4 +17,4 @@
       </tr>
     {% endfor %}
   </table>
-{ % endblock % }
+{% endblock %}
