@@ -2,10 +2,21 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Todo
+from .forms import InputForm
 
-def index(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
+def main(request):
+    
+    form = InputForm()
+    
+    if request.method == 'POST':
+        form = InputForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    context = {
+        'form': form
+    }
+    return render(request, 'main.html', context)
 
 def check(request):
     mydata = Todo.objects.all()
@@ -22,10 +33,6 @@ def details(request):
         'mymembers': mydata,
     }
     return HttpResponse(template.render(context, request))
-
-def main(request):
-  template = loader.get_template('main.html')
-  return HttpResponse(template.render())
 
 def template(request):
     mydata = Todo.objects.all()

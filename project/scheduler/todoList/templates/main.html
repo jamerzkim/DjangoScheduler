@@ -7,4 +7,12 @@ Homepage
 {% block content %}
 <h1>Enter todo list below: </h1>
 <a href="check/"><button class="button">Go to Other Page</button></a> 
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    {{form}}
+
+    <input type="submit">
+</form>
 {% endblock %}
